@@ -1,0 +1,18 @@
+<ion-view cache-view="false" view-title="New" name="New-view">
+  <ion-content>
+    <div class="form-data">
+      <form name="data" ng-submit="add(user)">
+      Name:<input type="text" name="username" ng-model="user.Name"><br>
+      Age: <input type="number" name="age" ng-model="user.Age"><br>
+      Gender:<select name="gender" ng-model="user.Gender">
+               <option value="male">Male</option>
+               <option value="female">Female</option>
+             </select><br>
+  
+      City:  <input type="text" name="city" ng-model="user.city"><br>
+      State: <input type="text" name="state" ng-model="user.state"><br>
+      <input type="submit" value="Submit">
+     </form> 
+    </div>
+  </ion-content>
+</ion-view>

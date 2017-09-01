@@ -1,0 +1,15 @@
+<ion-view view-title="Playlist" cache-view="false">
+  <ion-content>
+    <h1>Playlist</h1>
+
+
+    <table border="1" ng-repeat="table in tables">
+    <tr>
+      <th ng-repeat="column in table.cols">{{column}}</th>
+    </tr>
+    <tr ng-repeat="row in table.rows">
+      <td ng-repeat="column in table.cols">{{row[column]}}</td>
+    </tr>
+    </table>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view cache-view="false" view-title="Cards" name="Cards-view">
+ <div class="bar bar-header bar-positive">
+ </div>
+  <ion-content class="content has-header">
+   <div class="addNew">
+     <button class="button button-assertive" ng-click="new(profile)">
+        Add New
+     </button>
+   </div> 
+<input type="text" ng-model="text">
+<div class="list card" ng-repeat="profile in profiles | filter : text track by $index" >
+  <div class="item item-avatar" >
+    <img src="img/ionic.png">
+    
+    <h2>{{profile.name}}</h2>
+    <p>{{profile.age}}</p>
+    <p>{{profile.gender}}</p>
+    <p>{{profile.city}}</p>
+    <p>{{profile.state}}</p>
+    <button class="button button-positive" ng-click="show(profile)">
+      Show
+    </button>
+    <button class="button button-energized" ng-click="update(profile)">
+      Update
+    </button>
+    <button class="button button-assertive" ng-click="delete(profile.id,$index)">
+      Delete
+    </button>  
+  </div>
+  </div>
+   
+  </ion-content>
+</ion-view>
